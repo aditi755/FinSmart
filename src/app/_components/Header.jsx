@@ -8,6 +8,7 @@ import {useUser, UserButton} from '@clerk/nextjs'
 
 function Header(){
     const {user, isSignedIn} = useUser();
+    
     return(
         <div className='p-5 flex justify-between items-center border shadow-sm'>
             <div className="flex flex-row items-center ">
@@ -21,7 +22,7 @@ function Header(){
                 Dashboard
             </Button>
             </Link> 
-            <Link href="/">
+            <Link href={"/sign-in"}>
             <Button className="rounded-full">
                Get Started
             </Button>

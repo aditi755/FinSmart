@@ -8,7 +8,7 @@ export const Budgets = pgTable('budgets',{
     name: varchar('name').notNull(),
     amount: varchar('amount').notNull(),
     Icon: varchar('icon'),
-    craetedBy: varchar('createdBy').notNull()
+    createdBy: varchar('createdBy').notNull()
 
 })
 
@@ -18,7 +18,7 @@ export const Incomes= pgTable('incomes',{
     name: varchar('name').notNull(),
     amount: varchar('amount').notNull(),
     Icon: varchar('icon'),
-    craetedBy: varchar('createdBy').notNull()
+    createdBy: varchar('createdBy').notNull()
 
 })
 
@@ -28,6 +28,6 @@ export const expenses= pgTable('expenses',{
     name: varchar('name').notNull(),
     amount: varchar('amount').notNull(),
     budgetId: integer("budgetId").references(() => Budgets.id),
-    craetedBy: varchar('createdBy').notNull()
+    createdBy: varchar('createdBy').notNull()
 
 })
