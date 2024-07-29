@@ -1,5 +1,5 @@
 import { db } from "../../../../../../utils/dbConfig";
-import { expenses } from "../../../../../../utils/schema";
+import { Expenses } from "../../../../../../utils/schema";
 import { eq } from "drizzle-orm";
 import { Trash } from "lucide-react";
 import React from "react";

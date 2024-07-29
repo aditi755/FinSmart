@@ -1,7 +1,5 @@
 
 
-// import formatNumber from "@/utils";
-// import getFinancialAdvice from "@/utils/getFinancialAdvice";
 import {
   PiggyBank,
   ReceiptText,
@@ -11,7 +9,8 @@ import {
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { UserButton, useUser } from "@clerk/nextjs";
-
+// import formatNumber from "@/utils";
+import getFinancialAdvice from "../../../../../utils/getFinancialAdvice";
 function  CardInfo({ budgetList, incomeList }){
   const {user} = useUser();
   const [totalBudget, setTotalBudget] = useState(0)
@@ -21,37 +20,43 @@ function  CardInfo({ budgetList, incomeList }){
 
   useEffect(() => {
     if(budgetList.length > 0 || incomeList.length > 0){
-      calculateCardInfo()
+      CalculateCardInfo()
     }
   }, [budgetList, incomeList])
 
   useEffect(() => {
     if(totalBudget > 0 || totalIncome > 0 || totalSpend > 0){
       const fetchFinancialAdvice = async () => {
-        const advice = await getFinancialAdvice(totalBudget, totalSpend, totalIncome)
-      }
-      setFinancialAdvice(advice)
+        const advice = await getFinancialAdvice(
+          totalBudget,
+          totalIncome,
+          totalSpend
+        );
+        setFinancialAdvice(advice);
+      };
+
+      fetchFinancialAdvice();
     }
-    fetchFinancialAdvice();
   }, [totalBudget, totalIncome, totalSpend])
 
-  const calaculateCardInfo = () => {
-    let totalBudget = 0;
-    let totalSpeed = 0;
-    let totalIncome = 0;
+  const CalculateCardInfo = () => {
+    console.log(budgetList);
+    let totalBudget_ = 0;
+    let totalSpend_ = 0;
+    let totalIncome_ = 0;
 
     budgetList.forEach((element) => {
-    totalBudget_ = totalBudget_ + Number(element.amount)
-    totalSpend_ = totalSpend_ +  element.totalSpend;
-    })
+      totalBudget_ = totalBudget_ + Number(element.amount);
+      totalSpend_ = totalSpend_ + element.totalSpend;
+    });
 
     incomeList.forEach((element) => {
-      totalIncome_ = totalIncome_ + Number(element.totalAmount)
-    })
+      totalIncome_ = totalIncome_ + element.totalAmount;
+    });
 
+    setTotalIncome(totalIncome_);
     setTotalBudget(totalBudget_);
     setTotalSpend(totalSpend_);
-    setTotalIncome(totalIncome_);
   }
 
 

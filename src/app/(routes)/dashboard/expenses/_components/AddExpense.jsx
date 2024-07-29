@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { db } from "../../../../../../utils/dbConfig";
-import { expenses, Budgets } from "../../../../../../utils/schema";
+import { Expenses, Budgets } from "../../../../../../utils/schema";
 import { Loader } from "lucide-react";
 import moment from "moment"; //install
 import React, { useState } from "react";

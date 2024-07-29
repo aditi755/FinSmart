@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import CreateIncomes from "./CreateIncomes";
 import { db } from "../../../../../../utils/dbConfig";
 import { desc, eq, getTableColumns, sql } from "drizzle-orm";
-import { expenses, Income } from "../../../../../../utils/schema";
+import { Expenses, Incomes } from "../../../../../../utils/schema";
 import { useUser } from "@clerk/nextjs";
 import IncomeItem from "./IncomeItem";
 
