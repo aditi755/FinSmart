@@ -107,7 +107,7 @@ function Dashboard() {
                   <BudgetItem budget={budget} key={index} />
                 ))
               : [1, 2, 3, 4].map((item, index) => (
-                  <div
+                  <div  key={index}  
                     className="h-[180xp] w-full
                    bg-slate-200 rounded-lg animate-pulse"
                   ></div>
