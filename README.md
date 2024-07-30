@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FinSmart
 
-## Getting Started
+FinSmart is a finance management and advisor tool. This application helps you manage your finances with an intuitive user interface and powerful features. Built using modern technologies, it offers a comprehensive solution for tracking incomes, budgets, and expenses, along with personalized financial advice.
 
-First, run the development server:
+## Features
 
+- **Dashboard Pages**:
+  - **Incomes**: Easily track and manage all your income sources.
+  - **Budgets**: Set and view budgets to keep your spending in check.
+  - **Expenses**: Monitor and categorize your spending to better manage your finances.
+
+- **Personalized Financial Advice**: Receive tailored financial recommendations based on your budget, income, and spending data using the Google Gemini API.
+
+- **Interactive Charts**: Visualize your financial data with interactive charts and graphs using Recharts.
+
+- **User Authentication**: Securely manage user accounts with Clerk for authentication and user management.
+
+- **Responsive Design**: Enjoy a seamless and intuitive experience on both desktop and mobile devices, styled with Tailwind CSS.
+
+## Tech Stack
+
+- **Next.js**: A React framework for building server-side rendered and statically generated applications.
+- **PostgreSQL**: A powerful relational database for storing financial data.
+- **Neon**: Managed PostgreSQL database service for simplified database management.
+- **Drizzle ORM**: Object-relational mapper for working with PostgreSQL.
+- **Google Gemini API**: Provides personalized financial advice using advanced AI models.
+- **Recharts**: A charting library for creating interactive and responsive charts.
+- **Clerk**: Authentication service for secure user management.
+- **Tailwind CSS**: A utility-first CSS framework for designing modern and responsive user interfaces.
+
+## Demo:
+
+
+## Usage
+
+- **Dashboard Navigation**:
+
+Use the sidebar to navigate between the Incomes, Budgets, and Expenses pages.
+Each page displays relevant data and allows for interaction and management.
+
+- **Personalized Financial Advice**:
+
+Enter your financial details and preferences to receive personalized advice on how to better manage your finances.
+
+- **Charts and Visualizations**:
+
+Utilize interactive charts to analyze your financial data visually.
+
+## Installation
+
+Follow these steps to get the application up and running:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/budget-management-app.git
+   cd budget-management-app```
+
+2. **Install dependencies**:
+   ```bash
+   yarn install
+
+3. **Set Up Environment Variables**:
+Create a .env.local file in the root directory of your project with the following content:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_DATABASE_URL=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+NEXT_PUBLIC_GEMINI_API_KEY=
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Run Migrations (if applicable)**:
+   ```bash
+   yarn drizzle migrate
+   ```
+5. Start the Development Server:
+ ```bash
+yarn dev
+```
