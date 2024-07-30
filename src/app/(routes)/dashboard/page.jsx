@@ -77,8 +77,13 @@ function Dashboard() {
         .rightJoin(Expenses, eq(Budgets.id, Expenses.budgetId))
         .where(eq(Budgets.createdBy, user?.primaryEmailAddress.emailAddress))
         .orderBy(desc(Expenses.id));
+
+      //debug
+      console.log(result)
       setExpensesList(result);
     };
+
+    console.log('expenses list from dashboard', expensesList)
   
     return (
       <div className="p-8 bg-">

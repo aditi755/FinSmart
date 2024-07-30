@@ -8,8 +8,8 @@ import {
   CircleDollarSign,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { UserButton, useUser } from "@clerk/nextjs";
-// import formatNumber from "@/utils";
+import { UserButton, useUser } from "@clerk/nextjs"
+import formatNumber from "../../../../../utils";
 import getFinancialAdvice from "../../../../../utils/getFinancialAdvice";
 function  CardInfo({ budgetList, incomeList }){
   const {user} = useUser();
@@ -78,7 +78,7 @@ function  CardInfo({ budgetList, incomeList }){
               />
             </div>
             <h2 className="font-light text-md">
-              {financialAdvice || "Loading financial advice..."}
+              {FinancialAdvice || "Loading financial advice..."}
             </h2>
           </div>
         </div>

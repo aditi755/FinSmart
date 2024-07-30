@@ -49,6 +49,8 @@ function ExpensesScreen({ params }) {
       .where(eq(Budgets.id, params.id))
       .groupBy(Budgets.id);
 
+      //debug
+      console.log(result[0]);
     setbudgetInfo(result[0]);
     getExpensesList();
   };
@@ -63,6 +65,7 @@ function ExpensesScreen({ params }) {
       .where(eq(Expenses.budgetId, params.id))
       .orderBy(desc(Expenses.id));
     setExpensesList(result);
+    //debug
     console.log(result);
   };
 
