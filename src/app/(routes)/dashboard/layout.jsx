@@ -21,7 +21,7 @@ function DashboardLayout({ children }) {
       .select()
       .from(Budgets)
       .where(eq(Budgets.createdBy, user?.primaryEmailAddress?.emailAddress));
-    console.log(result);
+   
     if (result?.length == 0) {
       router.replace("/dashboard");  //budgtes removed from route will add
     }
