@@ -29,7 +29,13 @@ FinSmart is a finance management and advisor tool. This application helps you ma
 - **Tailwind CSS**: A utility-first CSS framework for designing modern and responsive user interfaces.
 
 ## Demo:
+![Screenshot (108)](https://github.com/user-attachments/assets/2b4a1236-75b0-4a54-a8eb-d511998324ad)
 
+![Screenshot (105)](https://github.com/user-attachments/assets/3be45bb2-fe74-401b-96e9-19ca6784e07b)
+
+![Screenshot (106)](https://github.com/user-attachments/assets/17ed4790-5495-437a-8694-a3bedee59c7b)
+
+![Screenshot (107)](https://github.com/user-attachments/assets/ca2446e8-e7a2-40e0-b4f0-7f32608bc8ef)
 
 ## Usage
 
