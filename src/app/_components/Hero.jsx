@@ -32,7 +32,7 @@ function Hero(){
     
   </div>
   <h3 className="text-4xl font-bold">How we help you </h3>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5">
+  <div className="grid mt-10 grid-cols-1 md:grid-cols-3 gap-5 p-5">
         <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
           <Image src="/feature1.png" alt="Feature 1" width={150} height={150} />
           <h2 className="text-2xl font-bold mt-4">Track Your Expenses</h2>
@@ -56,7 +56,7 @@ function Hero(){
         </div>
       </div>
 
-      <footer className="bg-gray-200 w-full py-6 flex flex-col items-center">
+      <footer className="mt-20 bg-gray-200 w-full py-6 flex flex-col items-center">
         <div className="flex flex-row items-center justify-between w-full max-w-6xl px-4">
           <div className="flex items-center">
             
