@@ -2,6 +2,8 @@
 
 FinSmart is a finance management and advisor tool. This application helps you manage your finances with an intuitive user interface and powerful features. Built using modern technologies, it offers a comprehensive solution for tracking incomes, budgets, and expenses, along with personalized financial advice.
 
+Live link: https://fin-smart.vercel.app
+
 ## Features
 
 - **Dashboard Pages**:
